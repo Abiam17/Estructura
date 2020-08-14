@@ -74,6 +74,30 @@ public class Lista {
         System.out.println(" ");
     }
     
+    
+    public void eliminarInicio(){        
+        if (inicio != null){
+            Nodo aux = inicio;
+            inicio=inicio.siguiente;
+            aux.siguiente=null;                    
+        }
+    }
+    
+    
+    public void eliminarFinal (){
+        if (inicio != null){
+            Nodo anterior = null;
+            Nodo aux = inicio;
+            while (aux.siguiente != null){
+                anterior=aux;
+                aux=aux.siguiente;
+            }
+            anterior.siguiente=null;
+        }
+    }
+    
+    
+    
     public void verificar(int dato){
         
         Nodo nuevo = new Nodo();
@@ -97,27 +121,8 @@ public class Lista {
         
     }
     
-
     
-   // public void lugardelalista (int dato){
-        
-      //  Nodo nuevo = new Nodo();
-      //  nuevo.dato = dato;
-      //  nuevo.siguiente = null;
-      //  Nodo aux = inicio;
-       // Nodo fin = inicio;
-       // while (aux.siguiente != null ){ 
-       //     if (aux.dato == nuevo.dato){
-       //     break;
-       //     } 
-       //     aux = aux.siguiente;
-       //     if (aux.dato != nuevo.dato){
-        //    fin.dato = nuevo.dato;
-       //     System.out.println(aux.dato);
-            
-       //     }
-       // }
-   // }
+    
      public void ingresarNoRepetido (int dato){
         
         Nodo nuevo = new Nodo();
@@ -145,6 +150,10 @@ public class Lista {
         
             
     } 
+
+    void eliminarFinal(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 

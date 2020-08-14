@@ -22,10 +22,9 @@ public class Principal {
         listita.insertar(15);
         listita.insertar(11);
         listita.insertar(21);
-        listita.recorrer();
-        
-        listita.ingresarNoRepetido(2);
-        
+
+        listita.eliminarInicio();
+        listita.recorrer();    
 
     }
     
